@@ -47,9 +47,19 @@ z-index:1000;
 }
 
 .logo{
+display:flex;
+align-items:center;
+gap:10px;
 font-size:28px;
 font-weight:700;
 letter-spacing:2px;
+}
+
+.logo img{
+width:45px;
+height:45px;
+border-radius:50%;
+object-fit:cover;
 }
 
 nav a{
@@ -214,7 +224,10 @@ display:none;
 
 <header>
 
-<div class="logo">90's Club</div>
+<div class="logo">
+    <img src="IMG_20260627_002434.png" alt="90's Club Logo">
+    <span>90's Club</span>
+</div>
 
 <nav>
 <a href="#">Home</a>
