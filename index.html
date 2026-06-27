@@ -154,8 +154,8 @@ function toggleCart(){
 document.getElementById("cartBox").classList.toggle("active");
 }
 
-function orderNow(){
-alert("Order Placed!");
+function orderNow(product){
+let phone = "8801849379559";
+let msg = "I want to order " + product;
+window.open("https://wa.me/"+phone+"?text="+encodeURIComponent(msg));
 }
-</script></body>
-</html>
