@@ -3,259 +3,61 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>90's Club</title>
 
-<title>90's Club | Premium Trouser Collection</title>
+<link rel="stylesheet" href="style.css">
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<!-- Facebook Pixel -->
+<script>
+!function(f,b,e,v,n,t,s){
+if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)
+}(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
 
-<style>
+fbq('init', 'YOUR_PIXEL_ID');
+fbq('track', 'PageView');
+</script>
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Poppins',sans-serif;
-scroll-behavior:smooth;
-}
-
-body{
-background:#0a0a0a;
-color:#fff;
-}
-
-header{
-position:fixed;
-top:0;
-width:100%;
-padding:15px 6%;
-display:flex;
-justify-content:space-between;
-align-items:center;
-background:rgba(0,0,0,.8);
-backdrop-filter:blur(10px);
-z-index:1000;
-}
-
-.logo{
-display:flex;
-align-items:center;
-gap:10px;
-font-size:22px;
-font-weight:700;
-}
-
-.logo img{
-width:40px;
-height:40px;
-border-radius:50%;
-}
-
-nav a{
-margin-left:20px;
-font-size:14px;
-transition:.3s;
-}
-
-nav a:hover{
-color:#d4af37;
-}
-
-.hero{
-height:100vh;
-display:flex;
-justify-content:center;
-align-items:center;
-text-align:center;
-padding:20px;
-background:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.9));
-}
-
-.hero h1{
-font-size:45px;
-margin-bottom:15px;
-}
-
-.hero p{
-color:#ccc;
-max-width:600px;
-margin:auto;
-line-height:1.7;
-}
-
-.btn{
-display:inline-block;
-margin-top:25px;
-padding:12px 30px;
-background:#d4af37;
-color:#000;
-border-radius:30px;
-font-weight:600;
-transition:.3s;
-}
-
-.btn:hover{
-transform:translateY(-3px);
-}
-
-section{
-padding:80px 6%;
-}
-
-.title{
-text-align:center;
-font-size:32px;
-margin-bottom:40px;
-}
-
-.products{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-gap:20px;
-}
-
-.card{
-background:#111;
-border-radius:15px;
-overflow:hidden;
-transition:.3s;
-}
-
-.card:hover{
-transform:translateY(-8px);
-box-shadow:0 10px 25px rgba(212,175,55,.25);
-}
-
-.card img{
-width:100%;
-height:280px;
-object-fit:cover;
-}
-
-.card-content{
-padding:15px;
-}
-
-.price{
-color:#d4af37;
-font-weight:700;
-margin-top:8px;
-}
-
-.buy-btn{
-display:inline-block;
-margin-top:12px;
-padding:10px 20px;
-background:#d4af37;
-color:#000;
-border-radius:20px;
-font-size:14px;
-}
-
-.about, .contact{
-text-align:center;
-max-width:700px;
-margin:auto;
-color:#ccc;
-line-height:1.8;
-}
-
-footer{
-text-align:center;
-padding:25px;
-background:#111;
-margin-top:50px;
-font-size:13px;
-color:#aaa;
-}
-
-@media(max-width:768px){
-.hero h1{font-size:30px;}
-nav{display:none;}
-}
-
-</style>
 </head>
 
 <body>
 
 <header>
-<div class="logo">
-<img src="IMG_20260627_002434.png">
-<span>90's Club</span>
-</div>
-
-<nav>
-<a href="#">Home</a>
-<a href="#shop">Collection</a>
-<a href="#about">About</a>
-<a href="#contact">Contact</a>
-</nav>
+<h2>90's Club</h2>
+<button onclick="goToCart()">🛒 Cart</button>
 </header>
 
-<section class="hero">
-<div>
-<h1>Premium Trouser Collection</h1>
-<p>Timeless 90’s vibe with modern comfort.</p>
-<a href="#shop" class="btn">Shop Now</a>
-</div>
-</section>
-
-<section id="shop">
-<h2 class="title">Featured Trousers</h2>
-
-<div class="products">
+<section class="products">
 
 <div class="card">
 <img src="trouser1.jpg">
-<div class="card-content">
-<h3>Classic Black</h3>
-<p>Premium Fabric • Regular Fit</p>
-<div class="price">৳1,650</div>
-<a href="https://wa.me/8801849379559" class="buy-btn">Order Now</a>
-</div>
+<h3>Black Trouser</h3>
+<p>৳1650</p>
+<button onclick="addToCart('Black Trouser',1650)">Add to Cart</button>
 </div>
 
 <div class="card">
 <img src="trouser2.jpg">
-<div class="card-content">
 <h3>Beige Trouser</h3>
-<p>Soft Fabric • Modern Fit</p>
-<div class="price">৳1,750</div>
-<a href="https://wa.me/8801849379559" class="buy-btn">Order Now</a>
-</div>
+<p>৳1750</p>
+<button onclick="addToCart('Beige Trouser',1750)">Add to Cart</button>
 </div>
 
 <div class="card">
 <img src="trouser3.jpg">
-<div class="card-content">
 <h3>Gray Trouser</h3>
-<p>Stretch Fabric • Slim Fit</p>
-<div class="price">৳1,850</div>
-<a href="https://wa.me/8801849379559" class="buy-btn">Order Now</a>
-</div>
+<p>৳1850</p>
+<button onclick="addToCart('Gray Trouser',1850)">Add to Cart</button>
 </div>
 
-</div>
 </section>
 
-<section id="about">
-<h2 class="title">About</h2>
-<div class="about">
-<p>90's Club delivers premium trousers inspired by classic streetwear with modern comfort.</p>
-</div>
-</section>
-
-<section id="contact">
-<h2 class="title">Contact</h2>
-<div class="contact">
-<p>📍 Mirpur-14, Dhaka</p>
-<p>📱 WhatsApp: <a href="https://wa.me/8801849379559">+8801849379559</a></p>
-</div>
-</section>
-
-<footer>
-<p>© 2026 90's Club</p>
-</footer>
+<script src="script.js"></script>
 
 </body>
 </html>
