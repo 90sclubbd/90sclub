@@ -113,6 +113,69 @@ right:0;
 <img src="trouser1.jpg">
 <h3>Black Trouser</h3>
 <p>৳1200</p>
+<form id="orderForm">
+  <h2>Place Your Order</h2>
+
+  <input type="text" id="name" placeholder="Your Name" required><br><br>
+
+  <input type="text" id="phone" placeholder="Phone Number" required><br><br>
+
+  <textarea id="address" placeholder="Your Address" required></textarea><br><br>
+
+  <input type="text" id="product" value="Black Trouser" readonly><br><br>
+
+  <button type="submit">Order Now</button>
+</form>
+
+<p id="successMsg" style="color:lime; display:none;">
+  ✅ Order Sent Successfully!
+</p>
+
+<style>
+#orderForm{
+  background:black;
+  padding:20px;
+  border-radius:10px;
+}
+
+#orderForm input, #orderForm textarea{
+  width:100%;
+  padding:10px;
+  border:none;
+  border-radius:5px;
+}
+
+#orderForm button{
+  background:gold;
+  border:none;
+  padding:10px;
+  font-weight:bold;
+  cursor:pointer;
+}
+</style>
+
+<script>
+document.getElementById("orderForm").addEventListener("submit", function(e){
+  e.preventDefault();
+
+  let name = document.getElementById("name").value;
+  let phone = document.getElementById("phone").value;
+  let address = document.getElementById("address").value;
+  let product = document.getElementById("product").value;
+
+  let message = "New Order:%0A"
+              + "Name: " + name + "%0A"
+              + "Phone: " + phone + "%0A"
+              + "Address: " + address + "%0A"
+              + "Product: " + product;
+
+  let whatsapp = "https://wa.me/8801849379559?text=" + message;
+
+  window.open(whatsapp, "_blank");
+
+  document.getElementById("successMsg").style.display = "block";
+});
+</script>  
 <button onclick="addToCart('Black Trouser')">Add</button>
 </div><div class="card">
 <img src="trouser2.jpg">
