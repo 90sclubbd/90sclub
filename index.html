@@ -4,7 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>90's Club</title>
+<title>90's Club | Premium Trouser Collection</title>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
@@ -46,19 +47,9 @@ z-index:1000;
 }
 
 .logo{
-display:flex;
-align-items:center;
-gap:10px;
 font-size:28px;
 font-weight:700;
 letter-spacing:2px;
-}
-
-.logo img{
-width:45px;
-height:45px;
-border-radius:50%;
-object-fit:cover;
 }
 
 nav a{
@@ -223,10 +214,7 @@ display:none;
 
 <header>
 
-<div class="logo">
-    <img src="IMG_20260627_002434.png" alt="90's Club Logo"> onclick="openLightbox(this)"
-    <span>90's Club</span>
-</div>
+<div class="logo">90's Club</div>
 
 <nav>
 <a href="#">Home</a>
@@ -263,8 +251,8 @@ Made for everyday confidence.
 
 <div class="card">
 
-<img src="trouser1jpg.jpg" alt="Classic Black Trouser">
-    
+<img src="https://images.unsplash.com/photo-1514996937319-344454492b37?auto=format&fit=crop&w=800&q=80">
+
 <div class="card-content">
 
 <h3>Classic Black Trouser</h3>
@@ -273,14 +261,15 @@ Made for everyday confidence.
 
 <div class="price">৳1,650</div>
 
-<a href="https://wa.me/8801849379559" class="btn">Order Now</a>
+<a href="https://wa.me/8801849379559" class="buy-btn">Order Now</a>
+
 </div>
 
 </div>
 
 <div class="card">
 
-<img src="trouser2jpg.jpg" alt="Beige Trouser">
+<img src="https://images.unsplash.com/photo-1506629905607-d405b7a5a2c9?auto=format&fit=crop&w=800&q=80">
 
 <div class="card-content">
 
@@ -290,7 +279,7 @@ Made for everyday confidence.
 
 <div class="price">৳1,750</div>
 
-<a href="https://wa.me/8801849379559" class="btn">Order Now</a>
+<a href="https://wa.me/8801849379559" class="buy-btn">Order Now</a>
 
 </div>
 
@@ -383,19 +372,7 @@ card.style.boxShadow="none";
 });
 
 </script>
-<div id="lightbox" onclick="closeLightbox()" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.9);justify-content:center;align-items:center;z-index:9999;">
-    <img id="lightbox-img" src="" style="max-width:95%;max-height:95%;border-radius:10px;">
-</div>
 
-<script>
-function openLightbox(img){
-    document.getElementById("lightbox").style.display="flex";
-    document.getElementById("lightbox-img").src=img.src;
-}
-function closeLightbox(){
-    document.getElementById("lightbox").style.display="none";
-}
-</script>
 </body>
 
 </html>
