@@ -1,27 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Luxury Store</title>
-
-<!-- Facebook Pixel -->
-<script>
-!function(f,b,e,v,n,t,s){
-if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;
-n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)
-}(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
-
-fbq('init', 'YOUR_PIXEL_ID');
-fbq('track', 'PageView');
-</script>
-
-<style>
+<title>90's Club</title><style>
 body{
 margin:0;
 background:black;
@@ -37,17 +18,24 @@ padding:15px;
 background:#111;
 position:sticky;
 top:0;
-z-index:1000;
 }
 
-.logo{
-font-size:22px;
-font-weight:bold;
-color:gold;
+.logoBox{
+display:flex;
+align-items:center;
+gap:12px;
 }
 
-.cart{
-cursor:pointer;
+.logoBox img{
+width:45px;
+height:45px;
+border-radius:50%;
+}
+
+.logoBox span{
+font-size:20px;
+font-weight:700;
+color:silver;
 }
 
 /* Hero */
@@ -56,7 +44,6 @@ height:60vh;
 display:flex;
 align-items:center;
 justify-content:center;
-background:linear-gradient(to right,black,#111);
 font-size:30px;
 }
 
@@ -84,19 +71,16 @@ box-shadow:0 10px 25px rgba(212,175,55,.4);
 width:100%;
 height:220px;
 object-fit:cover;
-border-radius:8px;
 }
 
 button{
 padding:10px;
-margin-top:10px;
 background:gold;
 border:none;
 cursor:pointer;
-font-weight:bold;
 }
 
-/* Cart Popup */
+/* Cart */
 .cartBox{
 position:fixed;
 right:-100%;
@@ -111,86 +95,41 @@ transition:.4s;
 .cartBox.active{
 right:0;
 }
-
-input, textarea{
-width:100%;
-padding:10px;
-margin:5px 0;
-background:#222;
-border:none;
-color:white;
-}
-
-/* Footer */
-footer{
-text-align:center;
-padding:20px;
-background:#111;
-margin-top:20px;
-}
-</style>
-
-</head>
-
+</style></head>
 <body>
-
 <header>
-<div class="logo">Luxury</div>
-<div class="cart" onclick="toggleCart()">🛒 (<span id="count">0</span>)</div>
-</header>
-
-<div class="hero">
+<div class="logoBox">
+<img src="logo.png">
+<span>90’s CLUB</span>
+</div><div onclick="toggleCart()">🛒 (<span id="count">0</span>)</div>
+</header><div class="hero">
 🔥 Premium Collection
-</div>
-
-<div class="products">
-
-<div class="card">
-<img src="https://picsum.photos/300/300?1">
+</div><div class="products"><div class="card">
+<img src="trouser1.jpg">
 <h3>Black Trouser</h3>
 <p>৳1200</p>
-<button onclick="addToCart('Black Trouser')">Add to Cart</button>
-</div>
-
-<div class="card">
-<img src="https://picsum.photos/300/300?2">
-<h3>White Shirt</h3>
-<p>৳1000</p>
-<button onclick="addToCart('White Shirt')">Add to Cart</button>
-</div>
-
-<div class="card">
-<img src="https://picsum.photos/300/300?3">
-<h3>Hoodie</h3>
-<p>৳1500</p>
-<button onclick="addToCart('Hoodie')">Add to Cart</button>
-</div>
-
-</div>
-
-<!-- Cart -->
-<div class="cartBox" id="cartBox">
-<h2>Your Cart</h2>
+<button onclick="addToCart('Black Trouser')">Add</button>
+</div><div class="card">
+<img src="trouser2.jpg">
+<h3>Gray Trouser</h3>
+<p>৳1300</p>
+<button onclick="addToCart('Gray Trouser')">Add</button>
+</div><div class="card">
+<img src="trouser3.jpg">
+<h3>Classic Trouser</h3>
+<p>৳1400</p>
+<button onclick="addToCart('Classic Trouser')">Add</button>
+</div></div><div class="cartBox" id="cartBox">
+<h2>Cart</h2>
 <ul id="cartItems"></ul>
-
-<h3>Order Form</h3>
-<input placeholder="Your Name">
-<input placeholder="Phone">
-<textarea placeholder="Address"></textarea>
-<button onclick="orderNow()">Place Order</button>
+<button onclick="orderNow()">Order Now</button>
 </div>
-
-<footer>
-© 2026 Luxury Store
-</footer>
-
 <script>
 let cart = [];
 
 function addToCart(product){
 cart.push(product);
 updateCart();
-fbq('track', 'AddToCart');
 }
 
 function updateCart(){
@@ -212,9 +151,6 @@ document.getElementById("cartBox").classList.toggle("active");
 
 function orderNow(){
 alert("Order Placed!");
-fbq('track', 'Purchase');
 }
-</script>
-
-</body>
+</script></body>
 </html>
