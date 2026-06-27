@@ -19,82 +19,86 @@ scroll-behavior:smooth;
 }
 
 body{
-background:#0a0a0a;
-color:#fff;
+background:#fff;
+color:#111;
+font-family:Arial, sans-serif;
+margin:0;
+padding:0;
 }
 
+/* Header (keep fixed but clean) */
 header{
 position:fixed;
 top:0;
 width:100%;
-padding:15px 6%;
 display:flex;
 justify-content:space-between;
 align-items:center;
-background:rgba(0,0,0,.8);
-backdrop-filter:blur(10px);
+padding:20px 40px;
+background:#fff;
+border-bottom:1px solid #eee;
 z-index:1000;
 }
 
-.logo{
-display:flex;
-align-items:center;
-gap:10px;
-font-size:22px;
-font-weight:700;
+/* spacing fix for fixed header */
+body{
+padding-top:80px;
 }
 
-.logo img{
-width:40px;
-height:40px;
-border-radius:50%;
+/* Products */
+.products{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+padding:40px;
 }
 
-nav a{
-margin-left:20px;
+/* Card */
+.card{
+background:#fff;
+padding:10px;
+transition:.3s;
+text-align:left;
+}
+
+.card:hover{
+transform:scale(1.03);
+}
+
+/* Image */
+img{
+width:100%;
+height:300px;
+object-fit:cover;
+}
+
+/* Text */
+h3{
+margin:10px 0 5px;
+font-size:16px;
+}
+
+p{
+margin:0;
 font-size:14px;
-transition:.3s;
+color:#555;
 }
 
-nav a:hover{
-color:#d4af37;
+/* Button */
+button{
+width:100%;
+padding:12px;
+margin-top:10px;
+background:#000;
+color:#fff;
+border:none;
+cursor:pointer;
+font-size:14px;
+letter-spacing:1px;
 }
 
-.hero{
-height:100vh;
-display:flex;
-justify-content:center;
-align-items:center;
-text-align:center;
-padding:20px;
-background:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.9));
-}
-
-.hero h1{
-font-size:45px;
-margin-bottom:15px;
-}
-
-.hero p{
-color:#ccc;
-max-width:600px;
-margin:auto;
-line-height:1.7;
-}
-
-.btn{
-display:inline-block;
-margin-top:25px;
-padding:12px 30px;
-background:#d4af37;
-color:#000;
-border-radius:30px;
-font-weight:600;
-transition:.3s;
-}
-
-.btn:hover{
-transform:translateY(-3px);
+button:hover{
+background:#333;
 }
 
 section{
